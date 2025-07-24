@@ -1,0 +1,652 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+a,
+a:link,
+a:visited{
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+ul,
+li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+section,
+span,
+p{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+}
+
+/* Sıfırlama kodları bitti */
+
+body{
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header{
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 40vh;
+}
+
+
+.header-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+.header-logo{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 3px;
+    padding-bottom: 5px;
+}
+
+
+.header-logo h2 {
+    font-size: 25px;
+    letter-spacing: 4px;
+    color: white;
+    border-bottom: 5px solid white;
+    border-radius: 30px;
+    padding-bottom: 5px;
+    margin: 0; 
+}
+.header-logo img {
+    width: 150px; 
+    height: auto; 
+    margin-right: 30px; 
+}
+
+ul{
+    display: flex;
+}
+
+li{
+    margin-left: 25px;
+    display: flex;
+}
+
+a{
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#menu-icon {
+    display: none;
+    width: 50px;
+    height: 50px;
+    margin-left: 40px;
+}
+
+
+
+/* Header bitti */
+
+/* main */
+
+main{
+    min-height: calc(100vh - 40vh - 20vh);
+    display: flex;
+    height: auto;
+    flex-direction: row;
+}
+
+
+
+aside {
+    width: 20%;
+    padding: 20px;
+
+}
+
+
+
+/* main (accounts) */
+
+#accounts {
+    margin-left: 40px;
+    width: 70%; 
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: flex-start; 
+}
+
+.account-box {
+    width: 100%;
+    max-height: 180px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    backdrop-filter: blur(20px);
+    background: transparent;
+    border: 2px solid rgba(255,255,255, .5);
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+    display: flex;
+
+}
+
+
+
+.account-box h3 {
+    color: hsl(206, 44%, 35%);
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+
+.account-info {
+    text-align: center; 
+}
+
+.account-upperBot{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 150px;
+    margin-top: 10px;
+}
+
+
+.account-skinBot{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: start;
+    margin-left: 20px;
+    width: 180%;
+}
+
+.essences{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+}
+
+.account-info{
+    font-size: 1rem;
+}
+
+.status.yes {
+    color: rgb(0, 255, 0);
+}
+
+.status.no {
+    color: red;
+}
+
+
+.account-info img {
+    width: 45px;
+    height: auto;
+    object-fit: cover; 
+    margin-top: 7px;
+}
+
+
+.account-skins {
+    font-size: 18px;
+    display: inline;
+    width: 100%;
+}
+
+.no-accounts-message {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 20px;
+    backdrop-filter:  blur(7px);
+    border: 4px solid #162938;
+    border-radius: 10px;
+    width: 80%;
+    height: 20%;
+    margin: 0 auto;
+    max-width: 600px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+/* pagination sistemi */
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#pagination button,
+#pagination span {
+    background-color: hsl(206, 44%, 15%);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-bottom: 35px;
+}
+
+#pagination button:hover,
+#pagination span:hover {
+    background-color: hsl(206, 44%, 5%);
+}
+
+#pagination .active {
+    background-color: hsl(206, 44%, 25%);
+}
+
+
+
+
+
+/* main (accounts) bitti */
+
+/* main (filter) */
+
+#filter {
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+    transform: translateY(-5%);
+    backdrop-filter: blur(20px);
+    background: transparent;
+    border: 2px solid rgba(255,255,255, .5);
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+    
+}
+
+#filter h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+
+input[type="number"],
+#filter label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+input[type="number"],
+#filter select, 
+#filter input[type="text"] {
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #162938;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+input[type="number"],
+#filter button {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #162938;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#filter button:hover {
+    background-color: hsl(206, 44%, 5%);
+}
+
+aside #filter #skins[type="text"],
+aside #filter #accNumberFilter[type="number"]{
+
+   cursor: auto;
+}
+
+aside #filter #accNumberFilter[type="text"] {
+
+    cursor: auto;
+ }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* main (filter) bitti */
+
+
+
+/* Footer */
+
+.footer h2{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-weight: bold;
+    padding: 50px 0;
+}
+
+.footer h2::after{
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+}
+
+
+.footer {
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+}
+
+.footer-copyright{
+    color: white;
+    text-align: center;
+    flex-basis: 55%;
+    line-height: 2;
+    font-size: 15px;
+    margin-bottom: 25px;
+    
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer-social img{
+    width: 200px; 
+    height: auto; 
+    margin: 0 80px;
+    margin-bottom: 20px;
+    
+}
+
+/* Footer bitti */
+
+
+/* Responsive Özellikleri */
+@media only screen and (max-width: 1130px){
+    .header-menu ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        margin-top: 75px;
+        top: 100px;
+        left: 0;
+        background: transparent;
+        backdrop-filter: blur(8px);
+        width: 100%;
+        overflow: hidden;
+        transition: max-height .5s;
+    }
+    .header-menu ul li{
+        margin-right: 50px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+    .header-menu #menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+    
+
+}
+
+@media only screen and (max-width: 1130px){
+    .footer-social ul li:last-child{
+        margin-right: 30px;
+    }
+    .footer-social img{
+        width: 200px; 
+        height: auto; 
+        margin: 0 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 1130px){
+
+    main{
+        flex-direction: column;
+    }
+    aside{
+        width: 100%;
+        margin-top: 40px;
+    }
+    #accounts{
+        width: 90%;
+        
+    }
+    .account-box{
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin-right: 40px;
+        max-height: none;
+
+    }
+
+    .no-accounts-message{
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+
+}
+
+@media only screen and (max-width: 800px){
+    .account-box {
+        flex-direction: column;
+    }
+
+    .account-box h3 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .account-box h3 span {
+        margin-right: 10px;
+    }
+
+    .account-skinBot{
+        width: 100%;
+    }
+
+    .footer-social img{
+        width: 120px; 
+        margin: 0 11px;
+    }
+
+    .essences{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .account-upperBot{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+        margin: 20px 0;
+    }
+
+}
+
+
+@media only screen and (max-width: 500px){
+
+    .header-logo a img{
+        width: 100px;
+        height: 100px;
+    }
+
+
+    .header-menu ul{
+        top: 70px;
+    }
+
+    .header-menu #menu-icon{
+        margin-left: 20px;
+
+    }
+
+    .footer-social img{
+        width: 90px; 
+        margin: 0 8px;
+    }
+}
+
+@media only screen and (max-width: 435px){
+
+    .header-logo a img{
+        display: none;
+        width: 80px;
+        height: 80px;
+    }
+
+
+    .header-menu ul{
+        top: 57px;
+    }
+
+    .header-menu #menu-icon{
+        
+            margin-left: 20px;
+            width: 35px;
+            height: 35px;
+    }
+
+
+    #filter {
+        transform: translateY(-12%);
+    }
+
+    #accounts{
+        width: 85%;
+    }
+
+    .footer-social img{
+        width: 80px; 
+        margin: 0 8px;
+    }
+
+}
+@media only screen and (max-width: 365px){
+
+    .header-logo a img{
+        display: none;
+    }
+
+
+    .header-menu ul{
+        top: 45px;
+    }
+
+    .header-menu #menu-icon{
+            margin-left: 20px;
+            width: 35px;
+            height: 35px;
+    }
+
+
+    #filter {
+        transform: translateY(-8%);
+    }
+
+
+    .footer-social img{
+        width: 70px; 
+        margin: 0 5px;
+    }
+
+    #accounts{
+        width: 85%;
+    }
+}

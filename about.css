@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-family: "Poppins", sans-serif;
+    
+}
+
+a,
+a:link,
+a:visited{
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+ul,
+li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+section,
+span,
+p{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+}
+
+/* Sıfırlama kodları bitti */
+
+
+
+body{
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header{
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 25vh;
+}
+
+
+.header-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+.header-logo{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 3px;
+    padding-bottom: 5px;
+}
+
+
+.header-logo h2 {
+    font-size: 25px;
+    letter-spacing: 4px;
+    color: white;
+    border-bottom: 5px solid white;
+    border-radius: 30px;
+    padding-bottom: 5px;
+    margin: 0; 
+}
+.header-logo img {
+    width: 150px; 
+    height: auto; 
+    margin-right: 30px; 
+}
+
+.header-navbar h2 {
+    color: white;
+}
+
+ul{
+    display: flex;
+}
+
+li{
+    margin-left: 25px;
+    display: flex;
+}
+
+a{
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#menu-icon {
+    display: none;
+    width: 50px;
+    height: 50px;
+    margin-left: 40px;
+}
+
+/* Header bitti */
+
+/* main kısmı */
+
+main {
+    color: white;
+    padding: 20px 0;
+}
+
+section{
+    position: relative;
+    margin-bottom: 40px;
+}
+
+section:after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 2px; 
+    background-color: hsl(206, 44%, 30%); 
+    position: absolute;
+    bottom: -20px; 
+    left: 20%;
+}
+
+section.intro:after, section.outro:after{
+    display: none;
+}
+
+
+.intro h1 {
+    margin-top: 55px;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.intro p {
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.content {
+    margin-bottom: 40px;
+}
+
+.content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+
+/* main kısmı bitti */
+
+/* Footer */
+
+.footer h2{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-weight: bold;
+    padding: 50px 0;
+}
+
+.footer h2::after{
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+}
+
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(3px);
+}
+
+.footer-copyright{
+    color: white;
+    text-align: center;
+    flex-basis: 55%;
+    line-height: 2;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer-social img{
+    width: 200px; 
+    height: auto; 
+    margin: 0 80px;
+    margin-bottom: 20px;
+}
+
+/* Footer bitti */
+@media only screen and (max-width: 1130px){
+    .header-menu ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        margin-top: 75px;
+        top: 100px;
+        left: 0;
+        background: transparent;
+        backdrop-filter: blur(8px);
+        width: 100%;
+        overflow: hidden;
+        transition: max-height .5s;
+    }
+    .header-menu ul li{
+        margin-right: 50px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+    .header-menu #menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+
+    .intro h1 {
+        margin-top: 80px;
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 1130px){
+    .footer-social ul li{
+        
+        flex-basis: 30%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-social ul li:last-child{
+        margin-right: 30px;
+    }
+    .footer-social img{
+        width: 200px; 
+        height: auto; 
+        margin: 0 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 1130px){
+
+    main{
+       height: auto;
+    }
+
+}
+
+@media only screen and (max-width: 800px){
+
+    .footer-social img{
+        width: 130px; 
+        margin: 0 15px;
+    }
+
+}
+
+@media only screen and (max-width: 555px){
+
+    .header img{
+        display: none;
+    }
+
+    .footer-social img{
+        width: 80px; 
+        margin: 0 7px;
+        margin-bottom: 20px;
+    }
+
+
+
+     .header-menu ul{
+
+        margin-top: 30px;
+        top: 100px;
+
+    }
+
+    .intro h1 {
+        margin-top: 40px;
+
+
+    }
+}
+
+@media only screen and (max-width: 430px){
+
+
+
+    .footer-social img{
+        width: 70px; 
+        margin: 0 4px;
+        margin-bottom: 20px;
+    }
+
+
+}
+
+@media only screen and (max-width: 360px){
+
+
+
+    .footer-social img{
+        width: 70px; 
+        margin: 0 4px;
+        margin-bottom: 20px;
+    }
+
+
+}
