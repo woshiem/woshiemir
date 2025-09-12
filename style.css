@@ -214,11 +214,11 @@ aside {
 }
 
 .status.yes {
-    color: rgb(0, 255, 0);
+    color: red;
 }
 
 .status.no {
-    color: red;
+    color: rgb(0, 255, 0);
 }
 
 
@@ -650,3 +650,4 @@ input[type="number"]::-webkit-inner-spin-button {
         width: 85%;
     }
 }
+
