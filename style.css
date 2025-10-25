@@ -33,10 +33,8 @@ p{
     border: none;
 }
 
-/* Sıfırlama kodları bitti */
-
 body{
-    background-image: url(images/background.jpg);
+    background-image: url(../images/background.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -80,7 +78,7 @@ body{
 .header-logo h2 {
     font-size: 25px;
     letter-spacing: 4px;
-    color: white;
+    color: rgb(255, 255, 255);
     border-bottom: 5px solid white;
     border-radius: 30px;
     padding-bottom: 5px;
@@ -115,11 +113,6 @@ a{
 }
 
 
-
-/* Header bitti */
-
-/* main */
-
 main{
     min-height: calc(100vh - 40vh - 20vh);
     display: flex;
@@ -136,8 +129,6 @@ aside {
 }
 
 
-
-/* main (accounts) */
 
 #accounts {
     margin-left: 40px;
@@ -163,9 +154,28 @@ aside {
     border: 2px solid rgba(255,255,255, .5);
     box-shadow: 0 0 5px rgb(255, 255, 255);
     display: flex;
-
+    position: relative;
 }
 
+.ek-odeme-vip {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    background-color: rgb(255, 165, 0);
+    color: #162938;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transform: rotate(-5deg);
+}
+
+.ek-odeme-vip span {
+    margin: 0;
+    padding: 0;
+}
 
 
 .account-box h3 {
@@ -254,8 +264,6 @@ aside {
 
 
 
-/* pagination sistemi */
-
 #pagination {
     display: flex;
     justify-content: center;
@@ -290,12 +298,6 @@ aside {
 }
 
 
-
-
-
-/* main (accounts) bitti */
-
-/* main (filter) */
 
 #filter {
     padding: 20px;
@@ -362,16 +364,11 @@ input[type="number"],
     background-color: hsl(206, 44%, 5%);
 }
 
-aside #filter #skins[type="text"],
-aside #filter #accNumberFilter[type="number"]{
+aside #filter #skins[type="text"]{
 
    cursor: auto;
 }
 
-aside #filter #accNumberFilter[type="text"] {
-
-    cursor: auto;
- }
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -379,11 +376,6 @@ input[type="number"]::-webkit-inner-spin-button {
     margin: 0;
 }
 
-/* main (filter) bitti */
-
-
-
-/* Footer */
 
 .footer h2{
     width: 100%;
@@ -436,10 +428,7 @@ input[type="number"]::-webkit-inner-spin-button {
     
 }
 
-/* Footer bitti */
 
-
-/* Responsive Özellikleri */
 @media only screen and (max-width: 1130px){
     .header-menu ul{
         display: flex;
@@ -513,6 +502,14 @@ input[type="number"]::-webkit-inner-spin-button {
 @media only screen and (max-width: 800px){
     .account-box {
         flex-direction: column;
+    }
+
+    .ek-odeme-vip {
+        top: 0px;
+        left: 0px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 0;
+        transform: none;
     }
 
     .account-box h3 {
@@ -650,4 +647,3 @@ input[type="number"]::-webkit-inner-spin-button {
         width: 85%;
     }
 }
-
