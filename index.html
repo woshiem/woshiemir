@@ -18,10 +18,6 @@
 
     
 </head>
-<body>
-
-
-            <!-- Header başlangıç -->
     <header id="header">
     <div class="header">
         <div class="container header-container">
@@ -36,9 +32,9 @@
                 </div>
                 <div class="header-menu">
                     <ul id="menuItems">
-                        <li><a href="contact.html">Bana ulaşın</a></li>
-                        <li><a href="about.html">Hakkımda</a></li>
-                        <li><a href="announcements.html">Duyurular</a></li>
+                        <li><a href="html/contact.html">Bana ulaşın</a></li>
+                        <li><a href="html/about.html">Hakkımda</a></li>
+                        <li><a href="html/announcements.html">Duyurular</a></li>
                     </ul>
                     <img src="images/menuimg.png" alt="menu-image" id="menu-icon" onclick="menuToggle();">
                 </div>
@@ -46,17 +42,12 @@
         </div>
     </div>
     </header>
-            <!-- Header bitiş -->
-
-        <!--Orta kısım başlangıç(filtre bölümü) -->
 <main>
-
     <aside>
         <div id="filter">
             <h2>Filtrele</h2>
             <label for="accNumberFilter">Hesap numarası girin:</label>
             <input type="number" id="accNumberFilter" placeholder="Örneğin: 397">
-
             <label for="server">Sunucu:</label>
             <select id="server">
                 <option value="all">Tümü</option>
@@ -65,41 +56,29 @@
                 <option value="NA">NA</option>
                 <option value="EUNE">EUNE</option>
             </select><br>
-
             <label for="maviOz">Mavi öz:</label>
             <select id="maviOz">
                 <option value="all">Tümü</option>
-                <option value="25.000+">25.000+</option>
                 <option value="30.000+">30.000+</option>
-                <option value="35.000+">35.000+</option>
                 <option value="40.000+">40.000+</option>
                 <option value="50.000+">50.000+</option>
+                <option value="60.000+">60.000+</option>
             </select><br>
-
             <label for="champion">Kostüm:</label>
             <input type="text" id="skins" placeholder="Şampiyon/Kostüm Ara">
             <button type="submit" id="filterSubmit">Filtrele</button>
             <button type="button" id="resetFilters">Filtreleri Sıfırla</button>
-
         </div>
     </aside>
-    <!-- Orta kısım (hesaplar bölümü) Hesaplar aşağı eklenecek. Classları ise account-box -->
     <section id="accounts">
-        
     </section>
-
 </main>
 <div id="pagination"></div>
-
-
-        <!-- Orta kısım bitiş -->
-
-        <!-- Footer başlangıç -->
 <footer id="footer" >
     <div class="footer" >
         <div class="footer-content">
             <div class="page-title">
-                <a href="contact.html">
+                <a href="html/contact.html">
                 <h2>İLETİŞİM</h2>
             </a>
             </div>
@@ -111,16 +90,14 @@
                     <li>
                     <a href="https://www.gamesatis.com/magaza/woshi-emir" target="_blank"><img src="images/gamesatis.svg" alt="gamesatis image"></a>
                     <a href="https://www.itemsatis.com/p/woshiemir" target="_blank"><img src="images/itemsatis.svg" alt="itemsatis image"></a>
-                    <a href="contact.html"><img src="images/discord.png" alt="discord image"></a>
+                    <a href="html/contact.html"><img src="images/discord.png" alt="discord image"></a>
                     </li>
                 </ul>
             </nav>
         </div>
     </div>
-
 </footer>
-        <!-- Footer bitiş -->
-
     <script src="script.js"></script>
 </body>
+
 </html>
