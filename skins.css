@@ -36,7 +36,7 @@ p{
 /* Sıfırlama kodları bitti */
 
 body{
-    background-image: url(images/background.jpg);
+    background-image: url(../images/background.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -650,4 +650,3 @@ input[type="number"]::-webkit-inner-spin-button {
         width: 85%;
     }
 }
-
